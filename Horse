@@ -1,0 +1,22 @@
+// Класс Лошадь, имплементирующий интерфейс
+class Horse extends Animal implements Movable {
+    private String color;
+
+    public Horse(String name, int age, String color) {
+        super(name, age);
+        this.color = color;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    @Override
+    public void go() {
+        System.out.println(getName() + " скачет.");
+    }
+}
